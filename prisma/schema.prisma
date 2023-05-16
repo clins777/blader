@@ -15,6 +15,4 @@ model Spot {
     spotName  String
     googleMapsUrl String
     imageUrl String
-    authorId  String
-    @@index([authorId])
 }

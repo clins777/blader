@@ -17,11 +17,23 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen justify-center">
-        <div className="h-full w-full border-x border-slate-400 md:max-w-2xl">
-          <div className="flex flex-col">
-            {data?.map((spot) => (
-              <div key={spot.id} className="border-b border-slate-400 p-8">
-                {spot.spotName}
+        <div className="h-full w-full border-x border-slate-400 md:max-w-5xl">
+          <div className="flex justify-center border-y border-slate-400 py-10">
+            <h1 className="text-2xl">🛼 Tokyo Blading Spots 🛼</h1>
+          </div>
+          <div className="flex flex-wrap">
+            {data?.map((spot, index) => (
+              <div
+                key={index}
+                className="w-full border-b border-slate-400 md:w-1/3"
+              >
+                <a
+                  href={spot.googleMapsUrl}
+                  className="flex justify-center border-b border-slate-400 py-5"
+                >
+                  {spot.spotName}
+                </a>
+                <img src={spot.imageUrl} className="flex p-5" />
               </div>
             ))}
           </div>
