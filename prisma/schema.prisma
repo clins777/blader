@@ -15,10 +15,6 @@ model Spot {
     spotName  String
     googleMapsUrl String
     imageUrl String
-    isFreeToEnter Boolean
-    isHelmetRequired Boolean
-    isIndoorPark Boolean
-    isBladerFriendly Boolean
     authorId  String
     @@index([authorId])
 }
