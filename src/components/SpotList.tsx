@@ -1,4 +1,4 @@
-import { Spot } from "@prisma/client";
+import { type Spot } from "@prisma/client";
 import { SpotCard } from "./SpotCard";
 
 type SpotListProps = { spots: Spot[] };
