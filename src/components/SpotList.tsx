@@ -7,7 +7,7 @@ export function SpotList({ spots }: SpotListProps) {
   return (
     <div className="flex flex-wrap">
       {spots.map((spot, index) => (
-        <SpotCard spot={spot} index={index} />
+        <SpotCard key={index} spot={spot} />
       ))}
     </div>
   );
