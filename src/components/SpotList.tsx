@@ -16,7 +16,8 @@ export function SpotList({ spots }: SpotListProps) {
         sm:p-10
         md:grid-cols-3
         lg:grid-cols-4
-        xl:grid-cols-5 2xl:grid-cols-6"
+        xl:grid-cols-5
+        2xl:grid-cols-6"
     >
       {spots.map((spot, index) => (
         <SpotCard key={index} spot={spot} />

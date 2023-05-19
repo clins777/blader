@@ -14,10 +14,8 @@ const Home: NextPage = () => {
   return (
     <main>
       <Header />
-      <div>
-        {/* <NavigationBar /> */}
-        <SpotList spots={data} />
-      </div>
+      {/* <NavigationBar /> */}
+      <SpotList spots={data} />
     </main>
   );
 };
