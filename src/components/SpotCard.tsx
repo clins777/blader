@@ -16,6 +16,7 @@ export function SpotCard({ spot }: SpotCardProps) {
     >
       <img
         src={imageUrl}
+        alt={spotName}
         className="aspect-square w-full rounded-[15px] object-cover"
       />
       <div>{spotName}</div>

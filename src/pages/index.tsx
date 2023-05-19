@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import { Header } from "~/components/Header";
-import { NavigationBar } from "~/components/NavigationBar";
+// import { NavigationBar } from "~/components/NavigationBar";
 import { SpotList } from "~/components/SpotList";
 import { api } from "~/utils/api";
 
