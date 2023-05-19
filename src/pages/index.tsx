@@ -12,10 +12,10 @@ const Home: NextPage = () => {
   if (!data) return <div>No spots yet 😭</div>;
 
   return (
-    <main className="flex h-screen justify-center">
+    <main>
       <Header />
-      <div className="h-full w-full border-x border-slate-400 md:max-w-5xl">
-        <NavigationBar />
+      <div>
+        {/* <NavigationBar /> */}
         <SpotList spots={data} />
       </div>
     </main>

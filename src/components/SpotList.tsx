@@ -5,7 +5,19 @@ type SpotListProps = { spots: Spot[] };
 
 export function SpotList({ spots }: SpotListProps) {
   return (
-    <div className="flex flex-wrap">
+    <div
+      className="
+        grid
+        grid-cols-1
+        gap-x-6
+        gap-y-10
+        p-6
+        sm:grid-cols-2
+        sm:p-10
+        md:grid-cols-3
+        lg:grid-cols-4
+        xl:grid-cols-5 2xl:grid-cols-6"
+    >
       {spots.map((spot, index) => (
         <SpotCard key={index} spot={spot} />
       ))}
