@@ -12,14 +12,16 @@ export function SpotCard({ spot }: SpotCardProps) {
   return (
     <div
       onClick={() => openInNewTab(googleMapsUrl)}
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-3"
     >
       <img
         src={imageUrl}
         alt={spotName}
         className="aspect-[2/1] w-full rounded-[15px] object-cover"
       />
-      <div>{spotName}</div>
+      <div>
+        <b>{spotName}</b>
+      </div>
     </div>
   );
 }
