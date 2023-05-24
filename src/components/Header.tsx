@@ -1,7 +1,13 @@
 import Head from "next/head";
 import getConfig from "next/config";
 
-const { PLAUSIBLE_DOMAIN } = getConfig() as { PLAUSIBLE_DOMAIN: string };
+const getPlausibleDomain = (): string => {
+  const { publicRuntimeConfig } = getConfig() as {
+    publicRuntimeConfig: { PLAUSIBLE_DOMAIN: string };
+  };
+  const { PLAUSIBLE_DOMAIN: plausibleDomain } = publicRuntimeConfig;
+  return plausibleDomain;
+};
 
 export function Header() {
   return (
@@ -11,7 +17,7 @@ export function Header() {
       <link rel="icon" href="/favicon.ico" />
       <script
         defer
-        data-domain={PLAUSIBLE_DOMAIN}
+        data-domain={getPlausibleDomain()}
         src="https://plausible.io/js/script.js"
       ></script>
     </Head>
