@@ -1,8 +1,7 @@
 import Head from "next/head";
 import getConfig from "next/config";
 
-const { publicRuntimeConfig } = getConfig();
-const { PLAUSIBLE_DOMAIN } = publicRuntimeConfig;
+const { PLAUSIBLE_DOMAIN } = getConfig() as { PLAUSIBLE_DOMAIN: string };
 
 export function Header() {
   return (
