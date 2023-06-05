@@ -21,7 +21,11 @@ export function SpotCard({ spot }: SpotCardProps) {
       onClick={() => openInNewTab(googleMapsUrl)}
     >
       <CardHeader floated={false}>
-        <img src={imageUrl} alt={spotName} className="aspect-square" />
+        <img
+          src={imageUrl}
+          alt={spotName}
+          className="aspect-square h-full w-full"
+        />
       </CardHeader>
       <CardBody>
         <Typography
