@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import { Header } from "~/components/Header";
+import { Placeholder } from "~/components/Placeholder";
 // import { NavigationBar } from "~/components/NavigationBar";
 import { SpotList } from "~/components/SpotList";
 import { api } from "~/utils/api";
@@ -7,9 +8,9 @@ import { api } from "~/utils/api";
 const Home: NextPage = () => {
   const { data, isLoading } = api.spots.getAll.useQuery();
 
-  if (isLoading) return <div>Loading spots ⏳</div>;
+  if (isLoading) return <Placeholder message={"Loading spots ⏳"} />;
 
-  if (!data) return <div>No spots yet 😭</div>;
+  if (!data) return <Placeholder message={"No spots yet 😭"} />;
 
   return (
     <main>
