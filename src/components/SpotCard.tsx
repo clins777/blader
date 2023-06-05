@@ -4,7 +4,7 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-import { Spot } from "@prisma/client";
+import type { Spot } from "@prisma/client";
 
 type SpotCardProps = { spot: Spot };
 
