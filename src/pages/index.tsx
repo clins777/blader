@@ -1,7 +1,7 @@
+import { ButtonGroup, Button } from "@material-tailwind/react";
 import { type NextPage } from "next";
 import { Header } from "~/components/Header";
 import { Placeholder } from "~/components/Placeholder";
-// import { NavigationBar } from "~/components/NavigationBar";
 import { SpotList } from "~/components/SpotList";
 import { api } from "~/utils/api";
 
@@ -15,7 +15,6 @@ const Home: NextPage = () => {
   return (
     <main>
       <Header />
-      {/* <NavigationBar /> */}
       <SpotList spots={data} />
     </main>
   );

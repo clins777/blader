@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-slate-100 text-zinc-700;
+@layer base {
+  body {
+    @apply bg-deep-purple-600 text-deep-purple-50;
+  }
 }
