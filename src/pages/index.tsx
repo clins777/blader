@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   if (!data) return <Placeholder message={"No spots yet 😭"} />;
 
   return (
-    <main>
+    <main className="flex flex-col">
       <Header />
       <SpotList spots={data} />
     </main>
