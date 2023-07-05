@@ -1,9 +1,3 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-} from "@material-tailwind/react";
 import type { Spot } from "@prisma/client";
 
 type SpotCardProps = { spot: Spot };
@@ -16,27 +10,15 @@ export function SpotCard({ spot }: SpotCardProps) {
   const { spotName, imageUrl, googleMapsUrl } = spot;
 
   return (
-    <Card
-      className="w-full max-w-[26rem] bg-deep-purple-50 shadow-lg"
-      onClick={() => openInNewTab(googleMapsUrl)}
-    >
-      <CardHeader floated={false}>
+    <div className="card" onClick={() => openInNewTab(googleMapsUrl)}>
+      <div className="flex p-8">
         <img
           src={imageUrl}
           alt={spotName}
-          className="aspect-square h-full w-full"
+          className="aspect-square rounded-md shadow-lg"
         />
-      </CardHeader>
-      <CardBody>
-        <Typography
-          variant="h5"
-          color="deep-purple"
-          align="center"
-          className="font-sans font-medium"
-        >
-          {spotName}
-        </Typography>
-      </CardBody>
-    </Card>
+      </div>
+      <h5 className="pb-8 text-xl">{spotName}</h5>
+    </div>
   );
 }

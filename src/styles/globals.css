@@ -4,6 +4,12 @@
 
 @layer base {
   body {
-    @apply bg-deep-purple-600 text-deep-purple-50;
+    @apply bg-purple-600 text-purple-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply grid grid-cols-1 place-items-center rounded-md bg-purple-100 shadow-lg;
   }
 }
