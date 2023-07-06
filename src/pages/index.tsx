@@ -14,6 +14,14 @@ const Home: NextPage = () => {
   return (
     <main className="flex min-h-screen w-screen flex-col">
       <Header />
+      <div className="navbar">
+        <a className="br-2" href="/">
+          Home
+        </a>
+        <a className="br-2" href="/">
+          New Spot
+        </a>
+      </div>
       <SpotList spots={data} />
     </main>
   );

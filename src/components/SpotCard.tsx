@@ -11,14 +11,10 @@ export function SpotCard({ spot }: SpotCardProps) {
 
   return (
     <div className="card" onClick={() => openInNewTab(googleMapsUrl)}>
-      <div className="flex p-8">
-        <img
-          src={imageUrl}
-          alt={spotName}
-          className="aspect-square rounded-md shadow-lg"
-        />
+      <div className="flex p-6">
+        <img src={imageUrl} alt={spotName} className="card-img" />
       </div>
-      <h5 className="pb-8 text-xl">{spotName}</h5>
+      <h5 className="pb-6 text-xl">{spotName}</h5>
     </div>
   );
 }

@@ -10,6 +10,12 @@
 
 @layer components {
   .card {
-    @apply grid grid-cols-1 place-items-center rounded-md bg-purple-100 shadow-lg;
+    @apply grid grid-cols-1 place-items-center rounded-2xl bg-purple-100 shadow-lg;
+  }
+  .card-img {
+    @apply aspect-square rounded-2xl shadow-2xl;
+  }
+  .navbar {
+    @apply flex flex-row justify-around bg-purple-100 p-4;
   }
 }

@@ -9,8 +9,7 @@ export function SpotList({ spots }: SpotListProps) {
       className="
         grid
         grid-cols-1
-        gap-x-6
-        gap-y-10
+        gap-6
         p-6
         sm:grid-cols-2
         sm:p-10
