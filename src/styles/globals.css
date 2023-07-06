@@ -6,6 +6,9 @@
   body {
     @apply bg-purple-600 text-purple-600;
   }
+  main {
+    @apply flex min-h-screen w-screen flex-col;
+  }
 }
 
 @layer components {

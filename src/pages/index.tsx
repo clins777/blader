@@ -1,5 +1,4 @@
 import { type NextPage } from "next";
-import { Header } from "~/components/Header";
 import { Placeholder } from "~/components/Placeholder";
 import { SpotList } from "~/components/SpotList";
 import { api } from "~/utils/api";
@@ -12,13 +11,12 @@ const Home: NextPage = () => {
   if (!data) return <Placeholder message={"No spots yet 😭"} />;
 
   return (
-    <main className="flex min-h-screen w-screen flex-col">
-      <Header />
+    <main>
       <div className="navbar">
         <a className="br-2" href="/">
           Home
         </a>
-        <a className="br-2" href="/">
+        <a className="br-2" href="/newspot">
           New Spot
         </a>
       </div>
