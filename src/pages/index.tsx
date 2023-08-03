@@ -21,6 +21,11 @@ const Home: NextPage = () => {
         </a>
       </div>
       <SpotList spots={data} />
+      <div className="fixed bottom-5 left-1/2 z-30 -translate-x-1/2 transform">
+        <button className="group">
+          <span className="group-hover:text-purple-100">Add a Spot</span>
+        </button>
+      </div>
     </main>
   );
 };
