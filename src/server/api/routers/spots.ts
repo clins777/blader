@@ -11,9 +11,9 @@ export const spotsRouter = createTRPCRouter({
   }),
   create: privateProcedure
     .input(addSpotFormInput)
-    .mutation(({ ctx, input }) => {
-      const authorId = ctx.currentUser.id;
-      return ctx.prisma.spot.create({
+    .mutation(async ({ ctx, input }) => {
+      const authorId = ctx.currentUserId;
+      return await ctx.prisma.spot.create({
         data: { ...input, authorId },
       });
     }),
