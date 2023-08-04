@@ -9,19 +9,19 @@
   main {
     @apply flex min-h-screen w-screen flex-col;
   }
-  button {
-    @apply rounded-2xl border-2 border-purple-600 bg-purple-100 px-6 py-2 shadow-lg hover:border-purple-100 hover:bg-purple-600;
+  input {
+    @apply p-2 outline-none focus:outline-none;
   }
 }
 
 @layer components {
   .card {
-    @apply grid grid-cols-1 place-items-center rounded-2xl bg-purple-100 shadow-lg;
+    @apply grid cursor-pointer grid-cols-1 place-items-center rounded-2xl bg-purple-100 shadow-lg;
   }
   .card-img {
     @apply aspect-square rounded-2xl shadow-2xl;
   }
-  .navbar {
-    @apply flex flex-row justify-around bg-purple-100 p-4;
+  .error {
+    @apply text-red-600;
   }
 }
