@@ -1,7 +1,7 @@
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { SignInButton } from "@clerk/nextjs";
 import { type NextPage } from "next";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 import AddSpotModal from "~/components/AddSpotModal";
 import { Placeholder } from "~/components/Placeholder";
 import { SpotList } from "~/components/SpotList";
@@ -18,13 +18,14 @@ const Home: NextPage = () => {
   return (
     <main>
       <div className="flex flex-row justify-between bg-purple-100 px-6 py-2 text-xl">
-        <a className="group flex items-center gap-2" href="/">
+        <Link className="group flex items-center gap-2" href="/">
           <img
             className="h-10 w-10 animate-spin rounded-full border-2 border-purple-600 md:animate-none md:group-hover:animate-spin"
             src="/favicon.ico"
+            alt="Blade bot 3000"
           />
           <span>Blade Spots</span>
-        </a>
+        </Link>
         {isSignedIn ? (
           <div className="flex">
             <UserButton

@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { type SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type AddSpotFormInput, addSpotFormInput } from "~/schema";
 import { RedirectToSignIn } from "@clerk/nextjs";
@@ -28,7 +28,7 @@ const AddSpotModal = ({ isSignedIn }: AddSpotModalProps) => {
       setShowModal(false);
       reset();
     },
-    onError: (e) => {
+    onError: (_e) => {
       setShowModal(false);
       reset();
       toast.error("Failed to post! Please try again later.");
@@ -55,7 +55,7 @@ const AddSpotModal = ({ isSignedIn }: AddSpotModalProps) => {
             <div className="relative h-full w-full px-6 py-2 md:h-2/3 md:w-1/2 md:p-0">
               <form
                 className="relative flex w-full flex-col rounded-lg border-2 border-purple-600 bg-purple-100 outline-none focus:outline-none"
-                onSubmit={handleSubmit(onSubmit)}
+                onSubmit={() => handleSubmit(onSubmit)}
               >
                 <div className="flex items-center justify-between rounded-t border-b border-solid border-purple-600 p-5">
                   <h3 className="text-2xl font-semibold">Add a Spot</h3>
